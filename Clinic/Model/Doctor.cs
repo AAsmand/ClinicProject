@@ -15,6 +15,7 @@ namespace ClinicProject.Model
 
         public People People { get; set; }
         public List<TurnTypeDoctor> TurnDoctors { get; set; }
+        public List<Turn> Turns { get; set; }
 
     }
 }

@@ -13,7 +13,8 @@ namespace ClinicProject.Model
         public int Cost { get; set; }   
         public int Price { get; set; }
         public int DoctorComission { get; set; }
-
+        public TimeSpan Duration { get; set; }
+        
         public List<TurnTypeDoctor> TurnDoctors { get; set; }
     }
 }

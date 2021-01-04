@@ -85,5 +85,30 @@ namespace ClinicProject
                 initTurnGrid();
             }
         }
+
+        private void AddTurnBtn_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(PatientsGrid.Rows[int.Parse(PatientsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+            ReserveTurn reserve = new ReserveTurn(id,clinicId);
+            if(reserve.ShowDialog()==DialogResult.OK)
+            {
+                initTurnGrid();
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            int id= int.Parse(TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+            var result = MessageBox.Show("آیا از حذف نوبت شماره " + TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString() + " مطمئن هستید ؟", "هشدار", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                TurnRepository.RemoveTurn(id);
+                initTurnGrid();
+            }
+            else
+            {
+                MessageBox.Show("عملیات لغو شد", "لغو عملیات", MessageBoxButtons.OK);
+            }
+        }
     }
 }

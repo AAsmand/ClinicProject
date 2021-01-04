@@ -63,10 +63,12 @@
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\ClinicContext.cs" />
+    <Compile Include="Data\Repositories\IDoctorRepository.cs" />
     <Compile Include="Data\Repositories\IPatientRepository.cs" />
     <Compile Include="Data\Repositories\IPeopleRepository.cs" />
     <Compile Include="Data\Repositories\IStaffRepository.cs" />
     <Compile Include="Data\Repositories\ITurnRepository.cs" />
+    <Compile Include="Data\Repositories\ITurnTypeRepository.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +83,14 @@
     <Compile Include="Migrations\202101022217548_Turn-Bugs-Fixed.designer.cs">
       <DependentUpon>202101022217548_Turn-Bugs-Fixed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101032051000_Turn-Duration-Fixed.cs" />
+    <Compile Include="Migrations\202101032051000_Turn-Duration-Fixed.designer.cs">
+      <DependentUpon>202101032051000_Turn-Duration-Fixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Clinic.cs" />
     <Compile Include="Model\Doctor.cs" />
+    <Compile Include="Model\DoctorViewModel.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\People.cs" />
     <Compile Include="Model\Staff.cs" />
@@ -94,6 +101,12 @@
     <Compile Include="Model\TurnTypeDoctor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReserveTurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveTurn.Designer.cs">
+      <DependentUpon>ReserveTurn.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffPannel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +125,9 @@
     <EmbeddedResource Include="Migrations\202101022217548_Turn-Bugs-Fixed.resx">
       <DependentUpon>202101022217548_Turn-Bugs-Fixed.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101032051000_Turn-Duration-Fixed.resx">
+      <DependentUpon>202101032051000_Turn-Duration-Fixed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,6 +138,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReserveTurn.resx">
+      <DependentUpon>ReserveTurn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffPannel.resx">
       <DependentUpon>StaffPannel.cs</DependentUpon>
     </EmbeddedResource>

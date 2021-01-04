@@ -17,3 +17,5 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.StaffPa
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.InitDatabase.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.TurnBugsFixed.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddPatient.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.TurnDurationFixed.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ReserveTurn.resources

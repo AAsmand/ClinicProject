@@ -13,7 +13,6 @@ namespace ClinicProject.Model
         public int DoctorId { get; set; }
         public int PatientId { get; set; }  
         public DateTime StartDate { get; set; }
-        public DateTime Duration { get; set; }
         public int TurnTypeId { get; set; }
         public int IsPaid { get; set; }
         public int ClinicId { get; set; }   

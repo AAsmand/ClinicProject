@@ -35,7 +35,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AddTurnBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.removeFilterBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
@@ -73,8 +72,7 @@
             this.CancelTurnBtn,
             this.toolStripSeparator1,
             this.AddTurnBtn,
-            this.toolStripButton2,
-            this.toolStripButton1});
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1275, 91);
@@ -106,6 +104,7 @@
             this.AddTurnBtn.Size = new System.Drawing.Size(73, 88);
             this.AddTurnBtn.Text = "ثبت نوبت";
             this.AddTurnBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.AddTurnBtn.Click += new System.EventHandler(this.AddTurnBtn_Click);
             // 
             // toolStripButton2
             // 
@@ -116,16 +115,7 @@
             this.toolStripButton2.Size = new System.Drawing.Size(71, 88);
             this.toolStripButton2.Text = "لغو نوبت";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(95, 88);
-            this.toolStripButton1.Text = "ویرایش نوبت";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // groupBox1
             // 
@@ -389,7 +379,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-          //  this.Name = "StaffPannel";
+           // this.Name = "StaffPannel";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "پنل منشی";
@@ -436,6 +426,5 @@
         private System.Windows.Forms.Button removeFilterBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
