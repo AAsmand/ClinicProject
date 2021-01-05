@@ -33,28 +33,28 @@ namespace ClinicProject
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             IStaffRepository staffRepository = new StaffRepository();
-            Staff user = staffRepository.Login(UserTxt.Text, PassTxt.Text);
-            if (user != null)
+            IAdminRepository adminRepository = new AdminRepository();
+            Admin admin = adminRepository.Login(UserTxt.Text, PassTxt.Text);
+            if (admin != null)
             {
-                //if (user.IsAdmin)
-                //{
-                //    Admin a = new Admin();
-                //    this.Hide();
-                //    a.ShowDialog();
-                //}
-                //else
-                //{
-                //    UserForm u = new UserForm(user.CustomerId);
-                //    this.Hide();
-                //    u.ShowDialog();
-                //}
-                StaffPannel pannel = new StaffPannel(user.ClinicId);
+                AdminPannel pannel = new AdminPannel(admin.ClinicId);
                 pannel.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("چنین کاربری در سیستم وجود ندارد", "خطا", MessageBoxButtons.OK);
+                Staff user = staffRepository.Login(UserTxt.Text, PassTxt.Text);
+                if (user != null)
+                {
+                    ClerkPannel pannel = new ClerkPannel(user.ClinicId);
+                    pannel.Show();
+                    this.Hide();
+                }
+
+                else
+                {
+                    MessageBox.Show("چنین کاربری در سیستم وجود ندارد", "خطا", MessageBoxButtons.OK);
+                }
             }
         }
     }

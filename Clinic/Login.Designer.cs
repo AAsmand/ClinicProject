@@ -69,7 +69,7 @@
             this.PassTxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.PassTxt.Name = "PassTxt";
             this.PassTxt.PasswordChar = '*';
-            this.PassTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.PassTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PassTxt.Size = new System.Drawing.Size(342, 33);
             this.PassTxt.TabIndex = 12;
             // 
@@ -79,7 +79,7 @@
             this.UserTxt.Location = new System.Drawing.Point(13, 25);
             this.UserTxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.UserTxt.Name = "UserTxt";
-            this.UserTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.UserTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.UserTxt.Size = new System.Drawing.Size(342, 33);
             this.UserTxt.TabIndex = 11;
             // 
@@ -100,11 +100,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(389, 74);
+            this.label2.Location = new System.Drawing.Point(378, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(75, 26);
+            this.label2.Size = new System.Drawing.Size(84, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "رمز عبور :";
             // 

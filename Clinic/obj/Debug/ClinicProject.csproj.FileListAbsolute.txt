@@ -1,4 +1,3 @@
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csprojAssemblyReference.cache
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Properties.Resources.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csproj.GenerateResource.cache
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csproj.CoreCompileInputs.cache
@@ -13,9 +12,14 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csproj.
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.exe
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.pdb
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Login.resources
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.StaffPannel.resources
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.InitDatabase.resources
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.TurnBugsFixed.resources
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddPatient.resources
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.TurnDurationFixed.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ReserveTurn.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AdminPannel.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManageTypeService.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ClerkPannel.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.initdatabase.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddTurnType.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddDoctor.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csprojAssemblyReference.cache
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddPeople.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.DoctorPannel.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.StockHolderPannel.resources

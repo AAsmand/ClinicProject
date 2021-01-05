@@ -35,7 +35,7 @@ namespace ClinicProject
         {
             TurnTypeCombo.DisplayMember = "Name";
             TurnTypeCombo.ValueMember = "Id";
-            TurnTypeCombo.DataSource = turnTypeRepository.getTurnTypes();
+            TurnTypeCombo.DataSource = turnTypeRepository.getTurnTypes(ClinicId);
             initDoctorsGrid();
             People p = peopleRepository.GetPeople(UserId);
             NameLbl.Text += p.Name+ " " + p.Family;
@@ -77,7 +77,7 @@ namespace ClinicProject
                 StartDate = Convert.ToDateTime(FirstTime.Text),
                 TurnTypeId = int.Parse(TurnTypeCombo.SelectedValue.ToString()),
                 IsPaid = Convert.ToInt32(IsPaidCheck.Checked),
-                ClinicId = this.ClinicId
+                ClinicId = this.ClinicId,
 
             };
             turnRepository.AddTurn(temp);

@@ -11,6 +11,7 @@ namespace ClinicProject.Data.Repositories
     public interface ITurnRepository
     {
         List<Turn> GetPatientTurn(int patientId,DateTime? date=null);
+        List<Turn> GetDoctorTurn(int DoctorId,int clinicId, DateTime? date = null);
         DateTime GetFirstTime(int DoctorId, int turnType);
         void AddTurn(Turn turn);
         void RemoveTurn(int turnId);
@@ -73,6 +74,7 @@ namespace ClinicProject.Data.Repositories
         public void AddTurn(Turn turn)
         {
             context.Turns.Add(turn);
+            turn.TurnType = context.TurnTypes.SingleOrDefault(t => t.Id == turn.TurnTypeId && t.ClinicId == turn.ClinicId);
             context.Doctors.Include("People").SingleOrDefault(d => d.Id == turn.DoctorId && d.ClinicId == turn.ClinicId).People.Income += (turn.TurnType.Price - turn.TurnType.Cost) * turn.TurnType.DoctorComission / 100;
             context.Clinics.SingleOrDefault(c=>c.Id==turn.ClinicId).Income+= (turn.TurnType.Price - turn.TurnType.Cost) * (100-turn.TurnType.DoctorComission) / 100;
             context.SaveChanges();
@@ -85,6 +87,16 @@ namespace ClinicProject.Data.Repositories
             Turn turn = context.Turns.Find(turnId);
             context.Turns.Remove(turn);
             context.SaveChanges();
+        }
+
+        public List<Turn> GetDoctorTurn(int DoctorId, int clinicId, DateTime? date = null)
+        {
+            if (date == null)
+                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.ClinicId == clinicId && T.DoctorId == DoctorId).ToList();
+            else
+            {
+                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T =>T.ClinicId==clinicId&& T.DoctorId == DoctorId && T.StartDate.Day == date.Value.Day && T.StartDate.Month == date.Value.Month && T.StartDate.Year == date.Value.Year).ToList();
+            }
         }
     }
 }

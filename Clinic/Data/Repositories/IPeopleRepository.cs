@@ -13,6 +13,7 @@ namespace ClinicProject.Data.Repositories
         void AddPeople(People people);
         People CheckExist(string codeMelli);
         People GetPeople(int id);
+        People GetPeopleByCode(string CodeMelli);
     }
 
     public class PeopleRepository : IPeopleRepository
@@ -32,6 +33,11 @@ namespace ClinicProject.Data.Repositories
         public People GetPeople(int id)
         {
             return context.Peoples.FirstOrDefault(p => p.Id == id);
+        }
+
+        public People GetPeopleByCode(string CodeMelli)
+        {
+            return context.Peoples.FirstOrDefault(p => p.CodeMelli == CodeMelli);
         }
     }
 }

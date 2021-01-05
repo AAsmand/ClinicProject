@@ -16,5 +16,6 @@ namespace ClinicProject.Model
         public List<StockHolder> StockHolders { get; set; }
         public List<Patient> Patients { get; set; }
         public List<Doctor> Doctors { get; set; }
+        public List<TurnType> TurnTypes { get; set; }
     }
 }

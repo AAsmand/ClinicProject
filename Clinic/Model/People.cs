@@ -15,7 +15,7 @@ namespace ClinicProject.Model
         public string CodeMelli { get; set; }
         public string Tell { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set; }  
 
     }
 }

@@ -56,38 +56,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPatient.cs">
+    <Compile Include="AddDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPatient.Designer.cs">
-      <DependentUpon>AddPatient.cs</DependentUpon>
+    <Compile Include="AddDoctor.Designer.cs">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPeople.Designer.cs">
+      <DependentUpon>AddPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTurnType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTurnType.Designer.cs">
+      <DependentUpon>AddTurnType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPannel.Designer.cs">
+      <DependentUpon>AdminPannel.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\ClinicContext.cs" />
+    <Compile Include="Data\Repositories\IAdminRepository.cs" />
     <Compile Include="Data\Repositories\IDoctorRepository.cs" />
     <Compile Include="Data\Repositories\IPatientRepository.cs" />
     <Compile Include="Data\Repositories\IPeopleRepository.cs" />
     <Compile Include="Data\Repositories\IStaffRepository.cs" />
+    <Compile Include="Data\Repositories\IStockHolderRepository.cs" />
     <Compile Include="Data\Repositories\ITurnRepository.cs" />
+    <Compile Include="Data\Repositories\ITurnTypeDoctorRepository.cs" />
     <Compile Include="Data\Repositories\ITurnTypeRepository.cs" />
+    <Compile Include="DoctorPannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorPannel.Designer.cs">
+      <DependentUpon>DoctorPannel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101022139334_Init-Database.cs" />
-    <Compile Include="Migrations\202101022139334_Init-Database.designer.cs">
-      <DependentUpon>202101022139334_Init-Database.cs</DependentUpon>
+    <Compile Include="ManageTypeService.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202101022217548_Turn-Bugs-Fixed.cs" />
-    <Compile Include="Migrations\202101022217548_Turn-Bugs-Fixed.designer.cs">
-      <DependentUpon>202101022217548_Turn-Bugs-Fixed.cs</DependentUpon>
+    <Compile Include="ManageTypeService.Designer.cs">
+      <DependentUpon>ManageTypeService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101032051000_Turn-Duration-Fixed.cs" />
-    <Compile Include="Migrations\202101032051000_Turn-Duration-Fixed.designer.cs">
-      <DependentUpon>202101032051000_Turn-Duration-Fixed.cs</DependentUpon>
+    <Compile Include="Migrations\202101042150069_init-database.cs" />
+    <Compile Include="Migrations\202101042150069_init-database.designer.cs">
+      <DependentUpon>202101042150069_init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Clinic.cs" />
     <Compile Include="Model\Doctor.cs" />
     <Compile Include="Model\DoctorViewModel.cs" />
@@ -107,26 +133,41 @@
     <Compile Include="ReserveTurn.Designer.cs">
       <DependentUpon>ReserveTurn.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffPannel.cs">
+    <Compile Include="ClerkPannel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffPannel.Designer.cs">
-      <DependentUpon>StaffPannel.cs</DependentUpon>
+    <Compile Include="ClerkPannel.Designer.cs">
+      <DependentUpon>ClerkPannel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddPatient.resx">
-      <DependentUpon>AddPatient.cs</DependentUpon>
+    <Compile Include="StockHolderPannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockHolderPannel.Designer.cs">
+      <DependentUpon>StockHolderPannel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDoctor.resx">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPeople.resx">
+      <DependentUpon>AddPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTurnType.resx">
+      <DependentUpon>AddTurnType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPannel.resx">
+      <DependentUpon>AdminPannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorPannel.resx">
+      <DependentUpon>DoctorPannel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101022139334_Init-Database.resx">
-      <DependentUpon>202101022139334_Init-Database.cs</DependentUpon>
+    <EmbeddedResource Include="ManageTypeService.resx">
+      <DependentUpon>ManageTypeService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101022217548_Turn-Bugs-Fixed.resx">
-      <DependentUpon>202101022217548_Turn-Bugs-Fixed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101032051000_Turn-Duration-Fixed.resx">
-      <DependentUpon>202101032051000_Turn-Duration-Fixed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101042150069_init-database.resx">
+      <DependentUpon>202101042150069_init-database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,8 +182,11 @@
     <EmbeddedResource Include="ReserveTurn.resx">
       <DependentUpon>ReserveTurn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffPannel.resx">
-      <DependentUpon>StaffPannel.cs</DependentUpon>
+    <EmbeddedResource Include="ClerkPannel.resx">
+      <DependentUpon>ClerkPannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockHolderPannel.resx">
+      <DependentUpon>StockHolderPannel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

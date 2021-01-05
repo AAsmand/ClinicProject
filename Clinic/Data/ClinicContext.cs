@@ -25,6 +25,8 @@ namespace ClinicProject.Data
         public DbSet<TurnTypeDoctor> TurnTypeDoctors { get; set; }
         public DbSet<Clinic> Clinics { get; set; }
         public DbSet<People> Peoples { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TurnTypeDoctor>().HasKey(t => new { t.DoctorId,t.TurnTypeId});
