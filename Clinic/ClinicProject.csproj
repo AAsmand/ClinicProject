@@ -56,61 +56,122 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddDoctor.cs">
+    <Compile Include="Forms\AddStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddDoctor.Designer.cs">
+    <Compile Include="Forms\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Addpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Addpatient.Designer.cs">
+      <DependentUpon>Addpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPeople.cs">
+    <Compile Include="Forms\AddPeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPeople.Designer.cs">
+    <Compile Include="Forms\AddPeople.Designer.cs">
       <DependentUpon>AddPeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTurnType.cs">
+    <Compile Include="Forms\AddStaffType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTurnType.Designer.cs">
+    <Compile Include="Forms\AddStaffType.Designer.cs">
+      <DependentUpon>AddStaffType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddTurnType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddTurnType.Designer.cs">
       <DependentUpon>AddTurnType.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPannel.cs">
+    <Compile Include="Forms\AdminPannel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPannel.Designer.cs">
+    <Compile Include="Forms\AdminPannel.Designer.cs">
       <DependentUpon>AdminPannel.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\ClinicContext.cs" />
     <Compile Include="Data\Repositories\IAdminRepository.cs" />
+    <Compile Include="Data\Repositories\IClinicRepository.cs" />
     <Compile Include="Data\Repositories\IDoctorRepository.cs" />
     <Compile Include="Data\Repositories\IPatientRepository.cs" />
     <Compile Include="Data\Repositories\IPeopleRepository.cs" />
     <Compile Include="Data\Repositories\IStaffRepository.cs" />
+    <Compile Include="Data\Repositories\IStaffTypeRepository.cs" />
     <Compile Include="Data\Repositories\IStockHolderRepository.cs" />
+    <Compile Include="Data\Repositories\ITransationRepository.cs" />
     <Compile Include="Data\Repositories\ITurnRepository.cs" />
     <Compile Include="Data\Repositories\ITurnTypeDoctorRepository.cs" />
     <Compile Include="Data\Repositories\ITurnTypeRepository.cs" />
-    <Compile Include="DoctorPannel.cs">
+    <Compile Include="Forms\DoctorPannel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoctorPannel.Designer.cs">
+    <Compile Include="Forms\DoctorPannel.Designer.cs">
       <DependentUpon>DoctorPannel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\EditPercent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\EditPercent.Designer.cs">
+      <DependentUpon>EditPercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTypeService.cs">
+    <Compile Include="Forms\ManageFinancial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageTypeService.Designer.cs">
+    <Compile Include="Forms\ManageFinancial.Designer.cs">
+      <DependentUpon>ManageFinancial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageStaffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageStaffs.Designer.cs">
+      <DependentUpon>ManageStaffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageStaffTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageStaffTypes.Designer.cs">
+      <DependentUpon>ManageStaffTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageTypeService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageTypeService.Designer.cs">
       <DependentUpon>ManageTypeService.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202101042150069_init-database.cs" />
     <Compile Include="Migrations\202101042150069_init-database.designer.cs">
       <DependentUpon>202101042150069_init-database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101052252090_add-clinicId-to-StaffType.cs" />
+    <Compile Include="Migrations\202101052252090_add-clinicId-to-StaffType.designer.cs">
+      <DependentUpon>202101052252090_add-clinicId-to-StaffType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101052353106_Add-AccountNumber.cs" />
+    <Compile Include="Migrations\202101052353106_Add-AccountNumber.designer.cs">
+      <DependentUpon>202101052353106_Add-AccountNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101060014271_Add-Transaction-Table.cs" />
+    <Compile Include="Migrations\202101060014271_Add-Transaction-Table.designer.cs">
+      <DependentUpon>202101060014271_Add-Transaction-Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101060131448_update-Transaction-table.cs" />
+    <Compile Include="Migrations\202101060131448_update-Transaction-table.designer.cs">
+      <DependentUpon>202101060131448_update-Transaction-table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Admin.cs" />
@@ -122,52 +183,86 @@
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\StaffType.cs" />
     <Compile Include="Model\StockHolder.cs" />
+    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Model\Turn.cs" />
     <Compile Include="Model\TurnType.cs" />
     <Compile Include="Model\TurnTypeDoctor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveTurn.cs">
+    <Compile Include="Forms\ReserveTurn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReserveTurn.Designer.cs">
+    <Compile Include="Forms\ReserveTurn.Designer.cs">
       <DependentUpon>ReserveTurn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClerkPannel.cs">
+    <Compile Include="Forms\ClerkPannel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClerkPannel.Designer.cs">
+    <Compile Include="Forms\ClerkPannel.Designer.cs">
       <DependentUpon>ClerkPannel.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockHolderPannel.cs">
+    <Compile Include="Forms\StockHolderPannel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockHolderPannel.Designer.cs">
+    <Compile Include="Forms\StockHolderPannel.Designer.cs">
       <DependentUpon>StockHolderPannel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddDoctor.resx">
+    <EmbeddedResource Include="Forms\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Addpatient.resx">
+      <DependentUpon>Addpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddDoctor.resx">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPeople.resx">
+    <EmbeddedResource Include="Forms\AddPeople.resx">
       <DependentUpon>AddPeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTurnType.resx">
+    <EmbeddedResource Include="Forms\AddStaffType.resx">
+      <DependentUpon>AddStaffType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTurnType.resx">
       <DependentUpon>AddTurnType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPannel.resx">
+    <EmbeddedResource Include="Forms\AdminPannel.resx">
       <DependentUpon>AdminPannel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoctorPannel.resx">
+    <EmbeddedResource Include="Forms\DoctorPannel.resx">
       <DependentUpon>DoctorPannel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\EditPercent.resx">
+      <DependentUpon>EditPercent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTypeService.resx">
+    <EmbeddedResource Include="Forms\ManageFinancial.resx">
+      <DependentUpon>ManageFinancial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageStaffs.resx">
+      <DependentUpon>ManageStaffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageStaffTypes.resx">
+      <DependentUpon>ManageStaffTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageTypeService.resx">
       <DependentUpon>ManageTypeService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101042150069_init-database.resx">
       <DependentUpon>202101042150069_init-database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101052252090_add-clinicId-to-StaffType.resx">
+      <DependentUpon>202101052252090_add-clinicId-to-StaffType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101052353106_Add-AccountNumber.resx">
+      <DependentUpon>202101052353106_Add-AccountNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101060014271_Add-Transaction-Table.resx">
+      <DependentUpon>202101060014271_Add-Transaction-Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101060131448_update-Transaction-table.resx">
+      <DependentUpon>202101060131448_update-Transaction-table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,13 +274,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReserveTurn.resx">
+    <EmbeddedResource Include="Forms\ReserveTurn.resx">
       <DependentUpon>ReserveTurn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClerkPannel.resx">
+    <EmbeddedResource Include="Forms\ClerkPannel.resx">
       <DependentUpon>ClerkPannel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockHolderPannel.resx">
+    <EmbeddedResource Include="Forms\StockHolderPannel.resx">
       <DependentUpon>StockHolderPannel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -211,6 +306,7 @@
   <ItemGroup>
     <None Include="Resources\cercle+close+delete+dismiss+remove+icon-1320196712448219692_64.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

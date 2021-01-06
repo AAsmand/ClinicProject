@@ -15,6 +15,8 @@ namespace ClinicProject.Data.Repositories
         DateTime GetFirstTime(int DoctorId, int turnType);
         void AddTurn(Turn turn);
         void RemoveTurn(int turnId);
+        int GetTotalPrice(int clinicId, int month, int year);
+        int GetTotalCost(int clinicId, int month, int year);
     }
 
 
@@ -97,6 +99,16 @@ namespace ClinicProject.Data.Repositories
             {
                 return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T =>T.ClinicId==clinicId&& T.DoctorId == DoctorId && T.StartDate.Day == date.Value.Day && T.StartDate.Month == date.Value.Month && T.StartDate.Year == date.Value.Year).ToList();
             }
+        }
+
+        public int GetTotalPrice(int clinicId, int month, int year)
+        {
+            return context.Turns.Include("TurnType").Where(t => t.ClinicId == clinicId && t.StartDate.Month == month && t.StartDate.Year == year).Sum(t => t.TurnType.Price);
+        }
+
+        public int GetTotalCost(int clinicId, int month, int year)
+        {
+            return context.Turns.Include("TurnType").Where(t => t.ClinicId == clinicId && t.StartDate.Month == month && t.StartDate.Year == year).Sum(t => t.TurnType.Cost);
         }
     }
 }

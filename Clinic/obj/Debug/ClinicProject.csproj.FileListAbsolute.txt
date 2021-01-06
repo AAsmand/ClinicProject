@@ -23,3 +23,14 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csprojA
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddPeople.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.DoctorPannel.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.StockHolderPannel.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.EditPercent.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Addpatient.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManageStaffs.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddStaff.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.addclinicIdtoStaffType.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddStaffType.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManageStaffTypes.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.AddAccountNumber.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManageFinancial.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.AddTransactionTable.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.updateTransactiontable.resources

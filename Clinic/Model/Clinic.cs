@@ -11,7 +11,6 @@ namespace ClinicProject.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Income { get; set; }
-
         public List<Staff> Staffs { get; set; }
         public List<StockHolder> StockHolders { get; set; }
         public List<Patient> Patients { get; set; }

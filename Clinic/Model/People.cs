@@ -14,6 +14,7 @@ namespace ClinicProject.Model
         public decimal Income { get; set; }
         public string CodeMelli { get; set; }
         public string Tell { get; set; }
+        public string AccountNumber { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }  
 
