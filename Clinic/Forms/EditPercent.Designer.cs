@@ -74,7 +74,6 @@
             this.EditPercentBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
             this.EditPercentBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditPercentBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditPercentBtn.Enabled = false;
             this.EditPercentBtn.Location = new System.Drawing.Point(13, 60);
             this.EditPercentBtn.Name = "EditPercentBtn";
             this.EditPercentBtn.Size = new System.Drawing.Size(47, 43);
@@ -86,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(214, 111);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.EditPercentBtn);

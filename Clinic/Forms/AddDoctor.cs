@@ -17,8 +17,9 @@ namespace ClinicProject
         ITurnTypeRepository turnTypeRepository;
         IDoctorRepository doctorRepository;
         ITurnTypeDoctorRepository turnTypeDoctorRepository;
+        ICheckRepository checkRepository;
         List<TurnType> list = new List<TurnType>();
-        int peopleId;
+        People people;
         public AddDoctor(int clinicId)
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace ClinicProject
             turnTypeRepository = new TurnTypeRepository();
             doctorRepository = new DoctorRepository();
             turnTypeDoctorRepository = new TurnTypeDoctorRepository();
+            checkRepository = new CheckRepository();
         }
 
         private void CheckBtn_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace ClinicProject
                 NameLbl.Text = "";
                 NameLbl.Text += p.Name + " " + p.Family;
                 CodeMelliLbl.Text = p.CodeMelli;
-                peopleId = p.Id;
+                people = p;
             }
         }
 
@@ -104,33 +106,47 @@ namespace ClinicProject
 
         private void AddDoctorBtn_Click(object sender, EventArgs e)
         {
-            if (list.Count > 0)
+            if (people!=null)
             {
-                Doctor doctor = new Doctor()
+                if (!checkRepository.IsExistDoctor(people.CodeMelli, ClinicId))
                 {
-                    PeopleId = peopleId,
-                    ClinicId = this.ClinicId,
-                };
-                doctorRepository.AddDoctor(doctor);
-                foreach (var item in list)
-                {
-                    TurnTypeDoctor turnTypeDoctor = new TurnTypeDoctor()
+                    if (list.Count > 0)
                     {
-                        DoctorId = doctor.Id,
-                        TurnTypeId = item.Id
-                    };
-                    turnTypeDoctorRepository.AddTurnTypeDoctor(turnTypeDoctor);
+                        Doctor doctor = new Doctor()
+                        {
+                            PeopleId = people.Id,
+                            ClinicId = this.ClinicId,
+                        };
+                        doctorRepository.AddDoctor(doctor);
+                        foreach (var item in list)
+                        {
+                            TurnTypeDoctor turnTypeDoctor = new TurnTypeDoctor()
+                            {
+                                DoctorId = doctor.Id,
+                                TurnTypeId = item.Id
+                            };
+                            turnTypeDoctorRepository.AddTurnTypeDoctor(turnTypeDoctor);
+                        }
+                        var result = MessageBox.Show("عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
+                        if (result == DialogResult.OK)
+                        {
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ابتدا یک تخصص اضافه نمایید !", "خطا", MessageBoxButtons.OK);
+                    }
                 }
-                var result = MessageBox.Show("عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
-                if (result == DialogResult.OK)
+                else
                 {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show("پزشک مورد نظر قبلا در سیستم ثبت شده است !", "خطا", MessageBoxButtons.OK);
                 }
             }
             else
             {
-                MessageBox.Show("ابتدا یک تخصص اضافه نمایید !", "خطا", MessageBoxButtons.OK);
+                MessageBox.Show("لطفا ابتدا یک کدملی معتبر را وارد نموده و بر روی کلید بررسی کد ملی کلیک نمایید !", "خطا", MessageBoxButtons.OK);
             }
         }
     }

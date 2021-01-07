@@ -27,7 +27,7 @@ namespace ClinicProject.Data
         public DbSet<People> Peoples { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        //public DbSet<ClinicSetting> ClinicSettings { get; set; }
+        public DbSet<ClinicSetting> ClinicSettings { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

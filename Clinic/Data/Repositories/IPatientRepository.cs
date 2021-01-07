@@ -13,6 +13,7 @@ namespace ClinicProject.Data.Repositories
         Patient GetPatient(int Id);
         void AddPatient(Patient patient);
         Patient IsExist(string codeMelli);
+        void RemovePatient(int Id);
 
     }
 
@@ -37,6 +38,13 @@ namespace ClinicProject.Data.Repositories
         public Patient IsExist(string codeMelli)
         {
             return context.Patients.Include("People").SingleOrDefault(p => p.People.CodeMelli == codeMelli);
+        }
+
+        public void RemovePatient(int Id)
+        {
+            Patient patient = context.Patients.Find(Id);
+            context.Patients.Remove(patient);
+            context.SaveChanges();
         }
     }
 }

@@ -36,3 +36,6 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrati
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManagePeople.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.addclinicIdtoPeople.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddEditPeople.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.AddClinicDaysTable.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Forms.ClinicSettingPannel.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.EditSalary.resources

@@ -50,7 +50,9 @@ namespace ClinicProject.Data.Repositories
 
         public void RemovePeople(int clinicId, int Id)
         {
-            context.Peoples.SingleOrDefault(p => p.Id == Id && p.ClinicId == clinicId);
+            People temp= context.Peoples.SingleOrDefault(p => p.Id == Id && p.ClinicId == clinicId);
+            context.Peoples.Remove(temp);
+            context.SaveChanges();
         }
 
         public void Update()

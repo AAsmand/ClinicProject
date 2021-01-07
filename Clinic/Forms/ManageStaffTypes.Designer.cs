@@ -36,6 +36,7 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UpdateSalary = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffTypeGrid)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddBtn,
-            this.RemoveBtn});
+            this.RemoveBtn,
+            this.UpdateSalary});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -127,6 +129,18 @@
             this.Cost.Name = "Cost";
             this.Cost.ReadOnly = true;
             // 
+            // UpdateSalary
+            // 
+            this.UpdateSalary.Image = global::ClinicProject.Properties.Resources.payment_day;
+            this.UpdateSalary.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UpdateSalary.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UpdateSalary.Name = "UpdateSalary";
+            this.UpdateSalary.Size = new System.Drawing.Size(95, 88);
+            this.UpdateSalary.Text = "تغییر دستمزد";
+            this.UpdateSalary.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.UpdateSalary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.UpdateSalary.Click += new System.EventHandler(this.UpdateSalary_Click);
+            // 
             // ManageStaffTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -158,5 +172,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.ToolStripButton UpdateSalary;
     }
 }

@@ -11,8 +11,11 @@ namespace ClinicProject.Data.Repositories
     public interface IStaffTypeRepository
     {
         List<StaffType> GetStaffTypes(int clinicId);
+        StaffType GetStaffType(int Id);
         void RemoveStaffType(int id);
         void AddStaffType(StaffType staffType);
+
+        void UpdateSalary(int Id,int salary);
     }
 
     public class StaffTypeRepository : IStaffTypeRepository
@@ -25,6 +28,11 @@ namespace ClinicProject.Data.Repositories
             context.SaveChanges();
         }
 
+        public StaffType GetStaffType(int Id)
+        {
+            return context.StaffTypes.Find(Id);
+        }
+
         public List<StaffType> GetStaffTypes(int clinicId)
         {
             return context.StaffTypes.Where(s => s.ClinicId == clinicId).ToList();
@@ -35,6 +43,14 @@ namespace ClinicProject.Data.Repositories
             StaffType temp = context.StaffTypes.Find(id);
             context.StaffTypes.Remove(temp);
             context.SaveChanges();
+        }
+
+        public void UpdateSalary(int Id,int salary)
+        {
+            StaffType staffType = context.StaffTypes.Find(Id);
+            staffType.Salary = salary;
+            context.SaveChanges();
+
         }
     }
 }

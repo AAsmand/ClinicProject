@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Repositories\ICheckRepository.cs" />
+    <Compile Include="Data\Repositories\IClinicSettingRepository.cs" />
     <Compile Include="Forms\AddStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +113,23 @@
     <Compile Include="Data\Repositories\ITurnRepository.cs" />
     <Compile Include="Data\Repositories\ITurnTypeDoctorRepository.cs" />
     <Compile Include="Data\Repositories\ITurnTypeRepository.cs" />
+    <Compile Include="Forms\ClinicSettingPannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClinicSettingPannel.Designer.cs">
+      <DependentUpon>ClinicSettingPannel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DoctorPannel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DoctorPannel.Designer.cs">
       <DependentUpon>DoctorPannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSalary.Designer.cs">
+      <DependentUpon>EditSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditPercent.cs">
       <SubType>Form</SubType>
@@ -184,6 +197,10 @@
     <Compile Include="Migrations\202101062036442_add-clinicId-toPeople.designer.cs">
       <DependentUpon>202101062036442_add-clinicId-toPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101071726289_Add-Clinic-Days-Table.cs" />
+    <Compile Include="Migrations\202101071726289_Add-Clinic-Days-Table.designer.cs">
+      <DependentUpon>202101071726289_Add-Clinic-Days-Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Clinic.cs" />
@@ -240,8 +257,14 @@
     <EmbeddedResource Include="Forms\AdminPannel.resx">
       <DependentUpon>AdminPannel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClinicSettingPannel.resx">
+      <DependentUpon>ClinicSettingPannel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorPannel.resx">
       <DependentUpon>DoctorPannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSalary.resx">
+      <DependentUpon>EditSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPercent.resx">
       <DependentUpon>EditPercent.cs</DependentUpon>
@@ -281,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101062036442_add-clinicId-toPeople.resx">
       <DependentUpon>202101062036442_add-clinicId-toPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071726289_Add-Clinic-Days-Table.resx">
+      <DependentUpon>202101071726289_Add-Clinic-Days-Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -419,6 +445,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PinClipart.com_black-power-fist-clipart_1856543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working-at-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

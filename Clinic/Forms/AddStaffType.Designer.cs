@@ -45,7 +45,7 @@
             this.SalaryTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SalaryTxt.Name = "SalaryTxt";
             this.SalaryTxt.Size = new System.Drawing.Size(209, 30);
-            this.SalaryTxt.TabIndex = 31;
+            this.SalaryTxt.TabIndex = 2;
             // 
             // label5
             // 
@@ -62,7 +62,7 @@
             this.NameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(209, 30);
-            this.NameTxt.TabIndex = 21;
+            this.NameTxt.TabIndex = 1;
             // 
             // label1
             // 

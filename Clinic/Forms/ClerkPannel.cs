@@ -110,17 +110,50 @@ namespace ClinicProject
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            int id= int.Parse(TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
-            var result = MessageBox.Show("آیا از حذف نوبت شماره " + TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString() + " مطمئن هستید ؟", "هشدار", MessageBoxButtons.YesNo);
+            if (TurnsGrid.Rows.Count > 0)
+            {
+                int id = int.Parse(TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+                var result = MessageBox.Show("آیا از حذف نوبت شماره " + TurnsGrid.Rows[int.Parse(TurnsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString() + " مطمئن هستید ؟", "هشدار", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    TurnRepository.RemoveTurn(id);
+                    initTurnGrid();
+                }
+                else
+                {
+                    MessageBox.Show("عملیات لغو شد", "لغو عملیات", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("لطفا ابتدا یک نوبت را انتخاب نمایید", "خطا", MessageBoxButtons.OK);
+            }
+        }
+
+        private void RemovePatient_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(PatientsGrid.Rows[int.Parse(PatientsGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+            var result = MessageBox.Show("آیا از حذف بیمار به شماره " + id + " مطمئن هستید ؟", "هشدار", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                TurnRepository.RemoveTurn(id);
+                PatientRepository.RemovePatient(id);
                 initTurnGrid();
             }
             else
             {
                 MessageBox.Show("عملیات لغو شد", "لغو عملیات", MessageBoxButtons.OK);
             }
+        }
+
+        private void PeopleBtn_Click(object sender, EventArgs e)
+        {
+            ManagePeople a = new ManagePeople(clinicId);
+            a.ShowDialog();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

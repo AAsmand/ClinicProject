@@ -38,6 +38,8 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.ManageFinancialBtn = new System.Windows.Forms.ToolStripButton();
+            this.ClinicSetting = new System.Windows.Forms.ToolStripButton();
+            this.ExitBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,9 @@
             this.AddTurnBtn,
             this.toolStripButton1,
             this.toolStripButton3,
-            this.ManageFinancialBtn});
+            this.ManageFinancialBtn,
+            this.ClinicSetting,
+            this.ExitBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1130, 91);
@@ -142,6 +146,29 @@
             this.ManageFinancialBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ManageFinancialBtn.Click += new System.EventHandler(this.ManageFinancialBtn_Click);
             // 
+            // ClinicSetting
+            // 
+            this.ClinicSetting.Image = global::ClinicProject.Properties.Resources.working_at_home;
+            this.ClinicSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClinicSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ClinicSetting.Name = "ClinicSetting";
+            this.ClinicSetting.Size = new System.Drawing.Size(114, 88);
+            this.ClinicSetting.Text = "تنظیمات کلینیک";
+            this.ClinicSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClinicSetting.Click += new System.EventHandler(this.ClinicSetting_Click);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Image = global::ClinicProject.Properties.Resources.exit3;
+            this.ExitBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ExitBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(68, 88);
+            this.ExitBtn.Text = "خروج";
+            this.ExitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ExitBtn.ToolTipText = "خروج";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
             // AdminPannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -176,5 +203,7 @@
         private System.Windows.Forms.ToolStripButton TypeManageBtn;
         private System.Windows.Forms.ToolStripButton ManageFinancialBtn;
         private System.Windows.Forms.ToolStripButton PeopleBtn;
+        private System.Windows.Forms.ToolStripButton ClinicSetting;
+        private System.Windows.Forms.ToolStripButton ExitBtn;
     }
 }

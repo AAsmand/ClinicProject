@@ -145,6 +145,7 @@
             // 
             // Addpatient
             // 
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(781, 221);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.AddPatientBtn);

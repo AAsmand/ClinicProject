@@ -16,6 +16,7 @@ namespace ClinicProject
         IPeopleRepository peopleRepository;
         IStaffRepository staffRepository;
         IStaffTypeRepository staffTypeRepository;
+        ICheckRepository checkRepository;
         People people;
         public AddStaff(int clinicId)
         {
@@ -24,6 +25,7 @@ namespace ClinicProject
             peopleRepository = new PeopleRepository();
             staffRepository = new StaffRepository();
             staffTypeRepository = new StaffTypeRepository();
+            checkRepository = new CheckRepository();
         }
 
         private void CheckBtn_Click(object sender, EventArgs e)
@@ -78,19 +80,31 @@ namespace ClinicProject
 
         private void AddStaffBtn_Click(object sender, EventArgs e)
         {
-            Staff staff = new Staff()
+            if (people != null)
             {
-                PeopleId = people.Id,
-                ClinicId = this.ClinicId,
-                StaffTypeId = int.Parse(TypeCombo.SelectedValue.ToString())
-            };
-            staffRepository.AddStaff(staff);
-            var result = MessageBox.Show("عملیات  با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
-            if (result == DialogResult.OK)
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                if (!checkRepository.IsExistStaff(people.CodeMelli, ClinicId))
+                {
+                    Staff staff = new Staff()
+                    {
+                        PeopleId = people.Id,
+                        ClinicId = this.ClinicId,
+                        StaffTypeId = int.Parse(TypeCombo.SelectedValue.ToString())
+                    };
+                    staffRepository.AddStaff(staff);
+                    var result = MessageBox.Show("عملیات  با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
+                    if (result == DialogResult.OK)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("کارمند مورد نظر قبلا در سیستم ثبت شده است !", "خطا", MessageBoxButtons.OK);
+                }
             }
+            else
+                MessageBox.Show("لطفا ابتدا یک کد ملی معتبر را وارد نموده و بر روی کلید بررسی کد ملی کلیک نمایید ", "خطا", MessageBoxButtons.OK);
         }
     }
 }

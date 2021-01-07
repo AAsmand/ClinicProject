@@ -22,6 +22,7 @@ namespace ClinicProject.Data.Repositories
 
     public class TurnRepository : ITurnRepository
     {
+        IClinicSettingRepository clinicSettingRepository = new ClinicSettingRepository();
         ClinicContext context = new ClinicContext();
         public TimeSpan isEmpty(DateTime time, int DoctorId, int TypeId, int clinicId)
         {
@@ -43,17 +44,18 @@ namespace ClinicProject.Data.Repositories
                 return list.Where(a => a.StartDate == time).FirstOrDefault().TurnType.Duration;
             }
         }
-        public DateTime GetFirstTime(int clinicId, int DoctorId, int turnType,int dayIndex)
+        public DateTime GetFirstTime(int clinicId, int DoctorId, int turnType, int dayIndex)
         {
-            DateTime d1 = DateTime.Now;
-            DateTime date = new DateTime(d1.Year, d1.Month, d1.Day, 15, 0, 0);
-            //dList<ClinicSetting> settings = context.ClinicSettings.Where(c => c.ClinicId == clinicId).ToList();
-            for (DateTime d=date; d.Hour <= 20; d = d.AddMinutes(10))    ////because 10 is minimum of time request 
+            ClinicSetting setting = clinicSettingRepository.GetFirstTime(clinicId, dayIndex);
+            DateTime date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, setting.StartTime.Hours, setting.StartTime.Minutes, setting.StartTime.Seconds);
+            for (DateTime d = date; d.Hour <= setting.EndTime.Hours; d = d.AddMinutes(10))    ////because 10 is minimum of time request 
             {
-                if ((int)d.DayOfWeek!=dayIndex && dayIndex != 7)
+                if ((int)d.DayOfWeek != dayIndex && dayIndex != 7)
                 {
-                    d=d.AddDays(1);
-                    d=d.AddMinutes(-10);
+                    d = d.AddDays(1);
+                    d = d.AddMinutes(-10);
+                    //setting = clinicSettingRepository.GetFirstTime(clinicId,dayIndex);
+                    //date= new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, setting.StartTime.Hours, setting.StartTime.Minutes, setting.StartTime.Seconds);
                     continue;
                 }
                 TimeSpan result = isEmpty(d, DoctorId, turnType, clinicId);        //// if result == 0 meens that time is empty 
@@ -62,10 +64,26 @@ namespace ClinicProject.Data.Repositories
                 {
                     d = d.AddMinutes(result.Minutes - 10).AddHours(result.Hours).AddSeconds(result.Seconds);
                 }
-                if (d.Hour == 20)
+                if (d.Hour == setting.EndTime.Hours)
                 {
-                    d=d.AddDays(1);
-                    d=d.AddHours(-12);
+                    d = d.AddMinutes(-10);
+                    if (dayIndex <= 6)
+                        setting = clinicSettingRepository.GetFirstTime(clinicId, ++dayIndex);
+                    else
+                    {
+                        dayIndex = 0;
+                        setting = clinicSettingRepository.GetFirstTime(clinicId, 0);
+                    }
+                    //date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, setting.StartTime.Hours, setting.StartTime.Minutes, setting.StartTime.Seconds);
+                    date.AddDays(1);
+                    date = date.AddMinutes(-(date.Minute));
+                    date = date.AddSeconds(-(date.Second));
+                    date = date.AddHours(-(date.Hour));
+
+                    date = date.AddMinutes(setting.StartTime.Minutes);
+                    date = date.AddSeconds(setting.StartTime.Seconds);
+                    date = date.AddHours(setting.StartTime.Hours);
+
                 }
             }
             return new DateTime();

@@ -13,6 +13,9 @@ namespace ClinicProject.Data.Repositories
     public interface ICheckRepository
     {
         string CheckPeople(People people,bool EditMode);
+        bool IsExistPatient(string CodeMelli,int clinicId);
+        bool IsExistDoctor(string CodeMelli,int clinicId);
+        bool IsExistStaff(string CodeMelli, int clinicId);
     }
     public class CheckRepository : ICheckRepository
     {
@@ -26,8 +29,8 @@ namespace ClinicProject.Data.Repositories
             if(EditMode)
                 oldUsername = context.Peoples.Find(people.Id).Username;
             if (String.IsNullOrEmpty(people.CodeMelli)&&!EditMode) result += "کد ملی نمیتواند خالی باشد !";
-            else if (people.CodeMelli.Length != 10 && !EditMode) result += "کد ملی باید 10 رقم باشد";
-            else if (!regex.IsMatch(people.CodeMelli) && !EditMode) result += "کد ملی باید از اعداد تشکیل شده باشد  !";
+            else if (people.CodeMelli.Length != 10) result += "کد ملی باید 10 رقم باشد";
+            else if (!regex.IsMatch(people.CodeMelli)) result += "کد ملی باید از اعداد تشکیل شده باشد  !";
             else if (!IsValidNationalCode(people.CodeMelli) && !EditMode) result += "کد ملی معتبر نمیباشد !";
             else if (context.Peoples.SingleOrDefault(p => p.CodeMelli == people.CodeMelli && p.ClinicId == people.ClinicId) != null && !EditMode) result += "کد ملی تکراری است !";
             else if (String.IsNullOrEmpty(people.Name)) result += "نام نمیتواند خالی باشد !";
@@ -39,7 +42,22 @@ namespace ClinicProject.Data.Repositories
             else if (people.Password.Length < 8) result += "رمز عبور باید بیشتر از 8 کاراکتر باشد !";
             return result;
         }
-       
+
+        public bool IsExistDoctor(string CodeMelli, int clinicId)
+        {
+            return context.Doctors.Include("People").Any(p => p.People.CodeMelli == CodeMelli && p.ClinicId == clinicId);
+        }
+
+        public bool IsExistPatient(string CodeMelli, int clinicId)
+        {
+            return context.Patients.Include("People").Any(p => p.People.CodeMelli == CodeMelli&&p.ClinicId==clinicId);
+        }
+
+        public bool IsExistStaff(string CodeMelli, int clinicId)
+        {
+            return context.Staffs.Include("People").Any(p => p.People.CodeMelli == CodeMelli && p.ClinicId == clinicId);
+        }
+
         public Boolean IsValidNationalCode(String nationalCode)
         { 
             var allDigitEqual = new[] { "0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999" };

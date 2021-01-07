@@ -54,12 +54,12 @@
             this.CostTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CostTxt.Name = "CostTxt";
             this.CostTxt.Size = new System.Drawing.Size(209, 30);
-            this.CostTxt.TabIndex = 31;
+            this.CostTxt.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 110);
+            this.label5.Location = new System.Drawing.Point(283, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 23);
             this.label5.TabIndex = 30;
@@ -71,12 +71,12 @@
             this.ComissionTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ComissionTxt.Name = "ComissionTxt";
             this.ComissionTxt.Size = new System.Drawing.Size(209, 30);
-            this.ComissionTxt.TabIndex = 28;
+            this.ComissionTxt.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 222);
+            this.label6.Location = new System.Drawing.Point(334, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 27;
@@ -88,12 +88,12 @@
             this.NameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(209, 30);
-            this.NameTxt.TabIndex = 21;
+            this.NameTxt.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(264, 184);
+            this.label7.Location = new System.Drawing.Point(294, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 23);
             this.label7.TabIndex = 26;
@@ -102,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 69);
+            this.label1.Location = new System.Drawing.Point(367, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 23);
             this.label1.TabIndex = 17;
@@ -111,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(320, 146);
+            this.label3.Location = new System.Drawing.Point(352, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 23);
             this.label3.TabIndex = 18;
@@ -123,7 +123,7 @@
             this.PriceTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PriceTxt.Name = "PriceTxt";
             this.PriceTxt.Size = new System.Drawing.Size(209, 30);
-            this.PriceTxt.TabIndex = 22;
+            this.PriceTxt.TabIndex = 3;
             // 
             // label4
             // 
@@ -141,7 +141,7 @@
             this.HourTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HourTxt.Name = "HourTxt";
             this.HourTxt.Size = new System.Drawing.Size(62, 30);
-            this.HourTxt.TabIndex = 33;
+            this.HourTxt.TabIndex = 5;
             // 
             // MinTxt
             // 
@@ -149,7 +149,7 @@
             this.MinTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinTxt.Name = "MinTxt";
             this.MinTxt.Size = new System.Drawing.Size(63, 30);
-            this.MinTxt.TabIndex = 34;
+            this.MinTxt.TabIndex = 6;
             // 
             // label2
             // 
@@ -198,7 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(381, 338);
+            this.ClientSize = new System.Drawing.Size(423, 338);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.AddTypeBtn);
             this.Controls.Add(this.label8);

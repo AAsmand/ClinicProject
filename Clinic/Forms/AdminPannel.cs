@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicProject.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,17 @@ namespace ClinicProject
         {
             ManageFinancial manageFinancial = new ManageFinancial(ClinicId);
             manageFinancial.Show();
+        }
+
+        private void ClinicSetting_Click(object sender, EventArgs e)
+        {
+            ClinicSettingPannel pannel = new ClinicSettingPannel(ClinicId);
+            pannel.Show();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

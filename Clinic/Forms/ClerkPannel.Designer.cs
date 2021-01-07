@@ -31,7 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.PeopleBtn = new System.Windows.Forms.ToolStripButton();
             this.CancelTurnBtn = new System.Windows.Forms.ToolStripButton();
+            this.RemovePatient = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AddTurnBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -59,6 +61,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TurnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExitBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PatientsGrid)).BeginInit();
@@ -70,15 +73,29 @@
             this.toolStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PeopleBtn,
             this.CancelTurnBtn,
+            this.RemovePatient,
             this.toolStripSeparator1,
             this.AddTurnBtn,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.ExitBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1275, 91);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // PeopleBtn
+            // 
+            this.PeopleBtn.Image = global::ClinicProject.Properties.Resources.settings;
+            this.PeopleBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PeopleBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PeopleBtn.Name = "PeopleBtn";
+            this.PeopleBtn.Size = new System.Drawing.Size(104, 88);
+            this.PeopleBtn.Text = "مدیریت پرونده";
+            this.PeopleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.PeopleBtn.Click += new System.EventHandler(this.PeopleBtn_Click);
             // 
             // CancelTurnBtn
             // 
@@ -90,6 +107,17 @@
             this.CancelTurnBtn.Text = "افزودن بیمار";
             this.CancelTurnBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CancelTurnBtn.Click += new System.EventHandler(this.CancelTurnBtn_Click);
+            // 
+            // RemovePatient
+            // 
+            this.RemovePatient.Image = global::ClinicProject.Properties.Resources.user;
+            this.RemovePatient.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.RemovePatient.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemovePatient.Name = "RemovePatient";
+            this.RemovePatient.Size = new System.Drawing.Size(78, 88);
+            this.RemovePatient.Text = "حذف بیمار";
+            this.RemovePatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.RemovePatient.Click += new System.EventHandler(this.RemovePatient_Click);
             // 
             // toolStripSeparator1
             // 
@@ -165,7 +193,7 @@
             this.CodeMelliTxt.Location = new System.Drawing.Point(668, 56);
             this.CodeMelliTxt.Name = "CodeMelliTxt";
             this.CodeMelliTxt.Size = new System.Drawing.Size(120, 30);
-            this.CodeMelliTxt.TabIndex = 12;
+            this.CodeMelliTxt.TabIndex = 3;
             this.CodeMelliTxt.TextChanged += new System.EventHandler(this.CodeMelliTxt_TextChanged);
             // 
             // label6
@@ -182,7 +210,7 @@
             this.FamilyTxt.Location = new System.Drawing.Point(857, 56);
             this.FamilyTxt.Name = "FamilyTxt";
             this.FamilyTxt.Size = new System.Drawing.Size(107, 30);
-            this.FamilyTxt.TabIndex = 10;
+            this.FamilyTxt.TabIndex = 2;
             this.FamilyTxt.TextChanged += new System.EventHandler(this.FamilyTxt_TextChanged);
             // 
             // TurnDatePic
@@ -190,7 +218,7 @@
             this.TurnDatePic.Location = new System.Drawing.Point(333, 56);
             this.TurnDatePic.Name = "TurnDatePic";
             this.TurnDatePic.Size = new System.Drawing.Size(236, 30);
-            this.TurnDatePic.TabIndex = 8;
+            this.TurnDatePic.TabIndex = 4;
             // 
             // label4
             // 
@@ -216,7 +244,7 @@
             this.NameTxt.Location = new System.Drawing.Point(1059, 56);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(103, 30);
-            this.NameTxt.TabIndex = 2;
+            this.NameTxt.TabIndex = 1;
             this.NameTxt.TextChanged += new System.EventHandler(this.NameTxt_TextChanged);
             // 
             // lbl
@@ -370,6 +398,18 @@
             this.TurnPrice.Name = "TurnPrice";
             this.TurnPrice.ReadOnly = true;
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Image = global::ClinicProject.Properties.Resources.exit3;
+            this.ExitBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ExitBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(68, 88);
+            this.ExitBtn.Text = "خروج";
+            this.ExitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ExitBtn.ToolTipText = "خروج";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
             // ClerkPannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -428,5 +468,8 @@
         private System.Windows.Forms.Button removeFilterBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton RemovePatient;
+        private System.Windows.Forms.ToolStripButton PeopleBtn;
+        private System.Windows.Forms.ToolStripButton ExitBtn;
     }
 }

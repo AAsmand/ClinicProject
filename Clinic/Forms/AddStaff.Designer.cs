@@ -62,7 +62,7 @@
             this.CodeMelliTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CodeMelliTxt.Name = "CodeMelliTxt";
             this.CodeMelliTxt.Size = new System.Drawing.Size(209, 27);
-            this.CodeMelliTxt.TabIndex = 27;
+            this.CodeMelliTxt.TabIndex = 1;
             // 
             // label2
             // 
@@ -137,7 +137,7 @@
             this.TypeCombo.Location = new System.Drawing.Point(453, 154);
             this.TypeCombo.Name = "TypeCombo";
             this.TypeCombo.Size = new System.Drawing.Size(233, 28);
-            this.TypeCombo.TabIndex = 40;
+            this.TypeCombo.TabIndex = 2;
             // 
             // AddTypeBtn
             // 

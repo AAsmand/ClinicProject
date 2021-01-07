@@ -60,6 +60,7 @@ namespace ClinicProject
             if (result == DialogResult.Yes)
             {
                 doctorRepository.RemoveDoctor(id);
+                initDoctorsGrid();
                 initTurnGrid();
             }
             else

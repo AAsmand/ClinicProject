@@ -59,7 +59,7 @@
             this.PassTxt.Name = "PassTxt";
             this.PassTxt.PasswordChar = '*';
             this.PassTxt.Size = new System.Drawing.Size(209, 30);
-            this.PassTxt.TabIndex = 29;
+            this.PassTxt.TabIndex = 7;
             // 
             // UsernameTxt
             // 
@@ -67,7 +67,7 @@
             this.UsernameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UsernameTxt.Name = "UsernameTxt";
             this.UsernameTxt.Size = new System.Drawing.Size(209, 30);
-            this.UsernameTxt.TabIndex = 28;
+            this.UsernameTxt.TabIndex = 6;
             // 
             // label6
             // 
@@ -103,7 +103,7 @@
             this.TellTex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TellTex.Name = "TellTex";
             this.TellTex.Size = new System.Drawing.Size(209, 30);
-            this.TellTex.TabIndex = 22;
+            this.TellTex.TabIndex = 4;
             // 
             // NameTxt
             // 
@@ -111,7 +111,7 @@
             this.NameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(209, 30);
-            this.NameTxt.TabIndex = 21;
+            this.NameTxt.TabIndex = 2;
             // 
             // label3
             // 
@@ -179,7 +179,7 @@
             this.AccountNumberTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AccountNumberTxt.Name = "AccountNumberTxt";
             this.AccountNumberTxt.Size = new System.Drawing.Size(209, 30);
-            this.AccountNumberTxt.TabIndex = 33;
+            this.AccountNumberTxt.TabIndex = 5;
             // 
             // FamilyTxt
             // 
@@ -187,7 +187,7 @@
             this.FamilyTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FamilyTxt.Name = "FamilyTxt";
             this.FamilyTxt.Size = new System.Drawing.Size(209, 30);
-            this.FamilyTxt.TabIndex = 31;
+            this.FamilyTxt.TabIndex = 3;
             // 
             // label5
             // 
@@ -204,7 +204,7 @@
             this.CodeMelliTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CodeMelliTxt.Name = "CodeMelliTxt";
             this.CodeMelliTxt.Size = new System.Drawing.Size(209, 30);
-            this.CodeMelliTxt.TabIndex = 24;
+            this.CodeMelliTxt.TabIndex = 1;
             // 
             // label2
             // 

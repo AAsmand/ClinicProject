@@ -53,11 +53,20 @@ namespace ClinicProject
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            
             AddStaffType addStaff = new AddStaffType(ClinicId);
             if(addStaff.ShowDialog()==DialogResult.OK)
             {
                 initGrid();
             }
+        }
+
+        private void UpdateSalary_Click(object sender, EventArgs e)
+        {
+            int TypeId = int.Parse(StaffTypeGrid.Rows[int.Parse(StaffTypeGrid.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+            int salary = staffTypeRepository.GetStaffType(TypeId).Salary;
+            EditSalary editSalary = new EditSalary(TypeId, salary);
+            editSalary.Show();
         }
     }
 }

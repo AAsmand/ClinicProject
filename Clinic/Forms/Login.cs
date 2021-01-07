@@ -47,8 +47,8 @@ namespace ClinicProject
                 if (user != null)
                 {
                     ClerkPannel pannel = new ClerkPannel(user.ClinicId);
-                    pannel.Show();
-                    this.Hide();
+                    pannel.Hide();
+                    this.Close();
                 }
 
                 else
