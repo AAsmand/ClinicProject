@@ -50,13 +50,13 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStrip1.Size = new System.Drawing.Size(773, 91);
+            this.toolStrip1.Size = new System.Drawing.Size(619, 91);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // AddBtn
             // 
-            this.AddBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.AddBtn.Image = global::ClinicProject.Properties.Resources.health_service;
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
@@ -67,7 +67,7 @@
             // 
             // RemoveBtn
             // 
-            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.fired_1_;
             this.RemoveBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RemoveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RemoveBtn.Name = "RemoveBtn";
@@ -105,7 +105,7 @@
             this.TurnTypeGrid.ReadOnly = true;
             this.TurnTypeGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TurnTypeGrid.RowTemplate.Height = 24;
-            this.TurnTypeGrid.Size = new System.Drawing.Size(773, 442);
+            this.TurnTypeGrid.Size = new System.Drawing.Size(619, 442);
             this.TurnTypeGrid.TabIndex = 4;
             // 
             // Id
@@ -140,12 +140,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 550);
+            this.ClientSize = new System.Drawing.Size(619, 550);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.TurnTypeGrid);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-          //  this.Name = "ManageTypeService";
+           // this.Name = "ManageTypeService";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت خدمات";

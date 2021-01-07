@@ -10,9 +10,9 @@ namespace ClinicProject.Data.Repositories
 {
     public interface ITurnRepository
     {
-        List<Turn> GetPatientTurn(int patientId,DateTime? date=null);
-        List<Turn> GetDoctorTurn(int DoctorId,int clinicId, DateTime? date = null);
-        DateTime GetFirstTime(int DoctorId, int turnType);
+        List<Turn> GetPatientTurn(int patientId, DateTime? date = null);
+        List<Turn> GetDoctorTurn(int DoctorId, int clinicId, DateTime? date = null);
+        DateTime GetFirstTime(int clinicId, int DoctorId, int turnType, int dayIndex);
         void AddTurn(Turn turn);
         void RemoveTurn(int turnId);
         int GetTotalPrice(int clinicId, int month, int year);
@@ -23,12 +23,13 @@ namespace ClinicProject.Data.Repositories
     public class TurnRepository : ITurnRepository
     {
         ClinicContext context = new ClinicContext();
-        public TimeSpan isEmpty(DateTime time,int DoctorId,int TypeId)
+        public TimeSpan isEmpty(DateTime time, int DoctorId, int TypeId, int clinicId)
         {
-            List<Turn> list = context.Doctors.Include("Turns").Include("Turns.TurnType").FirstOrDefault(d=>d.Id==DoctorId).Turns.OrderBy(d => d.StartDate).ToList();
+            List<Turn> list = context.Doctors.Include("Turns").Include("Turns.TurnType").FirstOrDefault(d => d.Id == DoctorId && d.ClinicId == clinicId).Turns.OrderBy(d => d.StartDate).ToList();
             Turn next = list.Where(a => a.StartDate > time).FirstOrDefault();
-            if (list.Where(a => a.StartDate == time).FirstOrDefault() == null) {
-                if (next==null||next.StartDate >= time + context.TurnTypes.FirstOrDefault(t => t.Id == TypeId).Duration)
+            if (list.Where(a => a.StartDate == time).FirstOrDefault() == null)
+            {
+                if (next == null || next.StartDate >= time + context.TurnTypes.FirstOrDefault(t => t.Id == TypeId).Duration)
                     return new TimeSpan();
                 else
                 {
@@ -42,22 +43,29 @@ namespace ClinicProject.Data.Repositories
                 return list.Where(a => a.StartDate == time).FirstOrDefault().TurnType.Duration;
             }
         }
-        public DateTime GetFirstTime(int DoctorId, int turnType)
+        public DateTime GetFirstTime(int clinicId, int DoctorId, int turnType,int dayIndex)
         {
             DateTime d1 = DateTime.Now;
             DateTime date = new DateTime(d1.Year, d1.Month, d1.Day, 15, 0, 0);
-            for (DateTime d = date; d.Hour <= 20; d = d.AddMinutes(10))    ////because 10 is minimum of time request 
+            //dList<ClinicSetting> settings = context.ClinicSettings.Where(c => c.ClinicId == clinicId).ToList();
+            for (DateTime d=date; d.Hour <= 20; d = d.AddMinutes(10))    ////because 10 is minimum of time request 
             {
-                TimeSpan result = isEmpty(d, DoctorId, turnType);        //// if result == 0 meens that time is empty 
+                if ((int)d.DayOfWeek!=dayIndex && dayIndex != 7)
+                {
+                    d=d.AddDays(1);
+                    d=d.AddMinutes(-10);
+                    continue;
+                }
+                TimeSpan result = isEmpty(d, DoctorId, turnType, clinicId);        //// if result == 0 meens that time is empty 
                 if (result == new TimeSpan()) return d;
                 else                                                    ////else we should go forward enough to last turn length
                 {
-                    d = d.AddMinutes(result.Minutes-10).AddHours(result.Hours).AddSeconds(result.Seconds);
+                    d = d.AddMinutes(result.Minutes - 10).AddHours(result.Hours).AddSeconds(result.Seconds);
                 }
                 if (d.Hour == 20)
                 {
-                    d.AddDays(1);
-                    d.AddHours(-12);
+                    d=d.AddDays(1);
+                    d=d.AddHours(-12);
                 }
             }
             return new DateTime();
@@ -65,11 +73,11 @@ namespace ClinicProject.Data.Repositories
 
         public List<Turn> GetPatientTurn(int patientId, DateTime? date = null)
         {
-            if(date==null)
-            return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.PatientId == patientId).ToList();
+            if (date == null)
+                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.PatientId == patientId).ToList();
             else
             {
-                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.PatientId == patientId&&T.StartDate.Day==date.Value.Day&&T.StartDate.Month==date.Value.Month&&T.StartDate.Year==date.Value.Year).ToList();
+                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.PatientId == patientId && T.StartDate.Day == date.Value.Day && T.StartDate.Month == date.Value.Month && T.StartDate.Year == date.Value.Year).ToList();
             }
         }
 
@@ -78,7 +86,7 @@ namespace ClinicProject.Data.Repositories
             context.Turns.Add(turn);
             turn.TurnType = context.TurnTypes.SingleOrDefault(t => t.Id == turn.TurnTypeId && t.ClinicId == turn.ClinicId);
             context.Doctors.Include("People").SingleOrDefault(d => d.Id == turn.DoctorId && d.ClinicId == turn.ClinicId).People.Income += (turn.TurnType.Price - turn.TurnType.Cost) * turn.TurnType.DoctorComission / 100;
-            context.Clinics.SingleOrDefault(c=>c.Id==turn.ClinicId).Income+= (turn.TurnType.Price - turn.TurnType.Cost) * (100-turn.TurnType.DoctorComission) / 100;
+            context.Clinics.SingleOrDefault(c => c.Id == turn.ClinicId).Income += (turn.TurnType.Price - turn.TurnType.Cost) * (100 - turn.TurnType.DoctorComission) / 100;
             context.SaveChanges();
             //////////
             ///
@@ -97,7 +105,7 @@ namespace ClinicProject.Data.Repositories
                 return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.ClinicId == clinicId && T.DoctorId == DoctorId).ToList();
             else
             {
-                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T =>T.ClinicId==clinicId&& T.DoctorId == DoctorId && T.StartDate.Day == date.Value.Day && T.StartDate.Month == date.Value.Month && T.StartDate.Year == date.Value.Year).ToList();
+                return context.Turns.Include("Doctor").Include("TurnType").Include("Doctor.People").Where(T => T.ClinicId == clinicId && T.DoctorId == DoctorId && T.StartDate.Day == date.Value.Day && T.StartDate.Month == date.Value.Month && T.StartDate.Year == date.Value.Year).ToList();
             }
         }
 

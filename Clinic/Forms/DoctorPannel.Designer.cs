@@ -86,13 +86,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TurnsGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TurnsGrid.Location = new System.Drawing.Point(12, 252);
+            this.TurnsGrid.Location = new System.Drawing.Point(12, 235);
             this.TurnsGrid.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.TurnsGrid.Name = "TurnsGrid";
             this.TurnsGrid.ReadOnly = true;
             this.TurnsGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TurnsGrid.RowTemplate.Height = 24;
-            this.TurnsGrid.Size = new System.Drawing.Size(721, 541);
+            this.TurnsGrid.Size = new System.Drawing.Size(721, 509);
             this.TurnsGrid.TabIndex = 36;
             // 
             // dataGridViewTextBoxColumn1
@@ -139,6 +139,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Controls.Add(this.removeFilterBtn);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.CodeMelliTxt);
@@ -150,7 +151,7 @@
             this.groupBox1.Controls.Add(this.NameTxt);
             this.groupBox1.Controls.Add(this.lbl);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 112);
+            this.groupBox1.Location = new System.Drawing.Point(12, 95);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -282,13 +283,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DoctorsGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DoctorsGrid.Location = new System.Drawing.Point(739, 252);
+            this.DoctorsGrid.Location = new System.Drawing.Point(739, 235);
             this.DoctorsGrid.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.DoctorsGrid.Name = "DoctorsGrid";
             this.DoctorsGrid.ReadOnly = true;
             this.DoctorsGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DoctorsGrid.RowTemplate.Height = 24;
-            this.DoctorsGrid.Size = new System.Drawing.Size(524, 541);
+            this.DoctorsGrid.Size = new System.Drawing.Size(524, 509);
             this.DoctorsGrid.TabIndex = 34;
             this.DoctorsGrid.Click += new System.EventHandler(this.DoctorsGrid_Click);
             // 
@@ -328,7 +329,7 @@
             // 
             // AddBtn
             // 
-            this.AddBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.AddBtn.Image = global::ClinicProject.Properties.Resources.medical;
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
@@ -344,7 +345,7 @@
             // 
             // RemoveBtn
             // 
-            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.fired;
             this.RemoveBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RemoveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RemoveBtn.Name = "RemoveBtn";
@@ -357,15 +358,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 821);
+            this.ClientSize = new System.Drawing.Size(1279, 751);
             this.Controls.Add(this.TurnsGrid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DoctorsGrid);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("B Yekan", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-           // this.Name = "DoctorPannel";
+          //  this.Name = "DoctorPannel";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت پزشکان";
             this.Load += new System.EventHandler(this.DoctorPannel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TurnsGrid)).EndInit();

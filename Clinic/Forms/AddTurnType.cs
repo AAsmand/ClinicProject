@@ -23,18 +23,16 @@ namespace ClinicProject
             ClinicId = clinicId;
             turnTypeRepository = new TurnTypeRepository();
         }
-
-        private void CancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void AddTurnType_Load(object sender, EventArgs e)
         {
            
         }
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void AddTypeBtn_Click(object sender, EventArgs e)
         {
             TimeSpan t = new TimeSpan(int.Parse(HourTxt.Text), int.Parse(MinTxt.Text), 0);
             TurnType temp = new TurnType()

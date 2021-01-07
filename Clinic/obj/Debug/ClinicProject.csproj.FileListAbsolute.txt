@@ -20,7 +20,6 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrati
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddTurnType.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddDoctor.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.csprojAssemblyReference.cache
-C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddPeople.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.DoctorPannel.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.StockHolderPannel.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.EditPercent.resources
@@ -34,3 +33,6 @@ C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrati
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManageFinancial.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.AddTransactionTable.resources
 C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.updateTransactiontable.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.ManagePeople.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.Migrations.addclinicIdtoPeople.resources
+C:\Users\BlaCk HunTeR\source\repos\Clinic\Clinic\obj\Debug\ClinicProject.AddEditPeople.resources

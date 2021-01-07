@@ -30,7 +30,7 @@ namespace ClinicProject
             System.Environment.Exit(1);
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void LoginBtn_Click_1(object sender, EventArgs e)
         {
             IStaffRepository staffRepository = new StaffRepository();
             IAdminRepository adminRepository = new AdminRepository();
@@ -56,6 +56,11 @@ namespace ClinicProject
                     MessageBox.Show("چنین کاربری در سیستم وجود ندارد", "خطا", MessageBoxButtons.OK);
                 }
             }
+        }
+
+        private void ExitBtn_Click_1(object sender, EventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

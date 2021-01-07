@@ -47,11 +47,13 @@
             this.AddTypeBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.AddDoctorBtn = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TurnTypeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedTypeGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddDoctorBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // CheckBtn
@@ -245,37 +247,36 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "خدمات انتخاب شده :";
             // 
-            // AddBtn
+            // ExitBtn
             // 
-            this.AddBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddBtn.Location = new System.Drawing.Point(12, 432);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(99, 39);
-            this.AddBtn.TabIndex = 38;
-            this.AddBtn.Text = "افزودن";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.ExitBtn.BackgroundImage = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(104, 415);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(70, 70);
+            this.ExitBtn.TabIndex = 53;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // CancelBtn
+            // AddDoctorBtn
             // 
-            this.CancelBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelBtn.Location = new System.Drawing.Point(117, 432);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(99, 39);
-            this.CancelBtn.TabIndex = 37;
-            this.CancelBtn.Text = "انصراف";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            this.AddDoctorBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
+            this.AddDoctorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddDoctorBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddDoctorBtn.Location = new System.Drawing.Point(13, 415);
+            this.AddDoctorBtn.Name = "AddDoctorBtn";
+            this.AddDoctorBtn.Size = new System.Drawing.Size(70, 70);
+            this.AddDoctorBtn.TabIndex = 52;
+            this.AddDoctorBtn.TabStop = false;
+            this.AddDoctorBtn.Click += new System.EventHandler(this.AddDoctorBtn_Click);
             // 
             // AddDoctor
             // 
-            this.ClientSize = new System.Drawing.Size(781, 478);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CancelBtn);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(781, 495);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.AddDoctorBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AddTypeBtn);
@@ -288,12 +289,15 @@
             this.Font = new System.Drawing.Font("B Yekan", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
           //  this.Name = "AddDoctor";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "افزودن پزشک";
             this.Load += new System.EventHandler(this.AddDoctor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TurnTypeGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedTypeGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddDoctorBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         protected System.Windows.Forms.Label label5;
-        protected System.Windows.Forms.Button AddBtn;
-        protected System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.PictureBox AddDoctorBtn;
     }
 }

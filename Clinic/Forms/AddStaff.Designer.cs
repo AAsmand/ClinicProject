@@ -36,12 +36,14 @@
             this.CodeMelliLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TypeCombo = new System.Windows.Forms.ComboBox();
             this.AddTypeBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.AddStaffBtn = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStaffBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // CheckBtn
@@ -120,32 +122,6 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "نام و نام خانوادگی :";
             // 
-            // AddBtn
-            // 
-            this.AddBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddBtn.Location = new System.Drawing.Point(12, 204);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(99, 39);
-            this.AddBtn.TabIndex = 38;
-            this.AddBtn.Text = "افزودن";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelBtn.Location = new System.Drawing.Point(117, 204);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(99, 39);
-            this.CancelBtn.TabIndex = 37;
-            this.CancelBtn.Text = "انصراف";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -173,14 +149,39 @@
             this.AddTypeBtn.UseVisualStyleBackColor = true;
             this.AddTypeBtn.Click += new System.EventHandler(this.AddTypeBtn_Click);
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackgroundImage = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(103, 154);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(70, 70);
+            this.ExitBtn.TabIndex = 59;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // AddStaffBtn
+            // 
+            this.AddStaffBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
+            this.AddStaffBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddStaffBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddStaffBtn.Location = new System.Drawing.Point(12, 154);
+            this.AddStaffBtn.Name = "AddStaffBtn";
+            this.AddStaffBtn.Size = new System.Drawing.Size(70, 70);
+            this.AddStaffBtn.TabIndex = 58;
+            this.AddStaffBtn.TabStop = false;
+            this.AddStaffBtn.Click += new System.EventHandler(this.AddStaffBtn_Click);
+            // 
             // AddStaff
             // 
-            this.ClientSize = new System.Drawing.Size(781, 256);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(781, 233);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.AddStaffBtn);
             this.Controls.Add(this.AddTypeBtn);
             this.Controls.Add(this.TypeCombo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CheckBtn);
             this.Controls.Add(this.CodeMelliTxt);
@@ -188,10 +189,13 @@
             this.Font = new System.Drawing.Font("B Yekan", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Name = "AddStaff";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "افزودن کارمند";
             this.Load += new System.EventHandler(this.Addpatient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStaffBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +211,10 @@
         private System.Windows.Forms.Label CodeMelliLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        protected System.Windows.Forms.Button AddBtn;
-        protected System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox TypeCombo;
         private System.Windows.Forms.Button AddTypeBtn;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.PictureBox AddStaffBtn;
     }
 }

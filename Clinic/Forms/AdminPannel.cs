@@ -56,7 +56,7 @@ namespace ClinicProject
 
         private void AddPeopleBtn_Click(object sender, EventArgs e)
         {
-            AddPeople a = new AddPeople(ClinicId);
+            ManagePeople a = new ManagePeople(ClinicId);
             a.ShowDialog();
         }
 

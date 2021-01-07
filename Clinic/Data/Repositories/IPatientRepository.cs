@@ -10,6 +10,7 @@ namespace ClinicProject.Data.Repositories
     public interface IPatientRepository
     {
         List<Patient> GetPatients(string name="",string family="",string codeMelli="");
+        Patient GetPatient(int Id);
         void AddPatient(Patient patient);
         Patient IsExist(string codeMelli);
 
@@ -24,7 +25,10 @@ namespace ClinicProject.Data.Repositories
             context.Patients.Add(patient);
             context.SaveChanges();
         }
-
+        public Patient GetPatient(int Id)
+        {
+            return context.Patients.Include("People").SingleOrDefault(p=>p.Id==Id);
+        }
         public List<Patient> GetPatients(string name = "", string family = "", string codeMelli = "")
         {
             return context.Patients.Include("People").Where(p => p.People.Name.Contains(name)&&p.People.Family.Contains(family)&&p.People.CodeMelli.Contains(codeMelli)).ToList();

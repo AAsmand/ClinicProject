@@ -31,12 +31,12 @@ namespace ClinicProject
 
         private void CheckBtn_Click(object sender, EventArgs e)
         {
-            People p = peopleRepository.GetPeopleByCode(CodeMelliTxt.Text);
+            People p = peopleRepository.GetPeopleByCode(ClinicId, CodeMelliTxt.Text);
             if (p == null)
             {
                 if (MessageBox.Show("فرد مورد نظر در دیتابیس وجود ندارد\n مایل به افزودن آن هستید ؟", "هشدار", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    AddPeople addPeople = new AddPeople(ClinicId);
+                    AddEditPeople addPeople = new AddEditPeople(ClinicId);
                     addPeople.Show();
                 }
             }
@@ -63,11 +63,6 @@ namespace ClinicProject
         private void CodeMelliTxt_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void CancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void AddTypeBtn_Click(object sender, EventArgs e)
@@ -98,30 +93,44 @@ namespace ClinicProject
         {
             TurnTypeGrid.AutoGenerateColumns = false;
             TurnTypeGrid.DataSource = turnTypeRepository.getTurnTypes(ClinicId);
+            if (TurnTypeGrid.Rows.Count > 0)
+                TurnTypeGrid.CurrentCell = TurnTypeGrid[0, 0];
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
-            Doctor doctor = new Doctor()
+            this.Close();
+        }
+
+        private void AddDoctorBtn_Click(object sender, EventArgs e)
+        {
+            if (list.Count > 0)
             {
-                PeopleId = peopleId,
-                ClinicId = this.ClinicId,
-            };
-            doctorRepository.AddDoctor(doctor);
-            foreach (var item in list)
-            {
-                TurnTypeDoctor turnTypeDoctor = new TurnTypeDoctor()
+                Doctor doctor = new Doctor()
                 {
-                    DoctorId=doctor.Id,
-                    TurnTypeId=item.Id
+                    PeopleId = peopleId,
+                    ClinicId = this.ClinicId,
                 };
-                turnTypeDoctorRepository.AddTurnTypeDoctor(turnTypeDoctor);
+                doctorRepository.AddDoctor(doctor);
+                foreach (var item in list)
+                {
+                    TurnTypeDoctor turnTypeDoctor = new TurnTypeDoctor()
+                    {
+                        DoctorId = doctor.Id,
+                        TurnTypeId = item.Id
+                    };
+                    turnTypeDoctorRepository.AddTurnTypeDoctor(turnTypeDoctor);
+                }
+                var result = MessageBox.Show("عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
-            var result = MessageBox.Show("عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK);
-            if (result == DialogResult.OK)
+            else
             {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                MessageBox.Show("ابتدا یک تخصص اضافه نمایید !", "خطا", MessageBoxButtons.OK);
             }
         }
     }

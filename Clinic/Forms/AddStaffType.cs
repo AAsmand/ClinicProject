@@ -24,12 +24,12 @@ namespace ClinicProject
             staffTypeRepository = new StaffTypeRepository();
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void AddStaffTypeBtn_Click(object sender, EventArgs e)
         {
             StaffType temp = new StaffType()
             {

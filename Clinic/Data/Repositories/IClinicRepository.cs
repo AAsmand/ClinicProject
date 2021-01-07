@@ -11,6 +11,7 @@ namespace ClinicProject.Data.Repositories
     public interface IClinicRepository
     {
         int GetIncome(int clinicId);
+       // List<ClinicSetting> GetSettings(int clinicId);
     }
 
     public class ClinicRepository : IClinicRepository
@@ -20,5 +21,10 @@ namespace ClinicProject.Data.Repositories
         {
             return (int)context.Clinics.Find(clinicId).Income;
         }
+
+        //public List<ClinicSetting> GetSettings(int clinicId)
+        //{
+        //    return context.ClinicSettings.Where(c => c.ClinicId == clinicId).ToList();
+        //}
     }
 }

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
             this.CostTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ComissionTxt = new System.Windows.Forms.TextBox();
@@ -44,33 +42,11 @@
             this.MinTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.AddTypeBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddTypeBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddBtn.Location = new System.Drawing.Point(30, 292);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(111, 56);
-            this.AddBtn.TabIndex = 22;
-            this.AddBtn.Text = "افزودن";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelBtn.Location = new System.Drawing.Point(146, 292);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(111, 56);
-            this.CancelBtn.TabIndex = 21;
-            this.CancelBtn.Text = "انصراف";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // CostTxt
             // 
@@ -193,11 +169,38 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "دقیقه";
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackgroundImage = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(121, 256);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(70, 70);
+            this.ExitBtn.TabIndex = 59;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // AddTypeBtn
+            // 
+            this.AddTypeBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
+            this.AddTypeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddTypeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddTypeBtn.Location = new System.Drawing.Point(30, 256);
+            this.AddTypeBtn.Name = "AddTypeBtn";
+            this.AddTypeBtn.Size = new System.Drawing.Size(70, 70);
+            this.AddTypeBtn.TabIndex = 58;
+            this.AddTypeBtn.TabStop = false;
+            this.AddTypeBtn.Click += new System.EventHandler(this.AddTypeBtn_Click);
+            // 
             // AddTurnType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 360);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(381, 338);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.AddTypeBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MinTxt);
@@ -205,8 +208,6 @@
             this.Controls.Add(this.CostTxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.PriceTxt);
             this.Controls.Add(this.ComissionTxt);
             this.Controls.Add(this.label3);
@@ -218,17 +219,17 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddTurnType";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "افزودن خدمات";
             this.Load += new System.EventHandler(this.AddTurnType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddTypeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.TextBox CostTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ComissionTxt;
@@ -243,5 +244,7 @@
         private System.Windows.Forms.TextBox MinTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.PictureBox AddTypeBtn;
     }
 }

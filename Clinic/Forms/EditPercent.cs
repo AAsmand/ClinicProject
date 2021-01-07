@@ -24,17 +24,17 @@ namespace ClinicProject
         {
 
         }
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         public int getPercent()
         {
             return int.Parse(PercentTxt.Text);
         }
 
-        private void ConfirmBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void EditPercentBtn_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();

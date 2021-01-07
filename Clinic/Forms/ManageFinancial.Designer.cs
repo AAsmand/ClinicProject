@@ -58,6 +58,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PaySalaries,
@@ -71,7 +72,7 @@
             // 
             // PaySalaries
             // 
-            this.PaySalaries.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.PaySalaries.Image = global::ClinicProject.Properties.Resources.payment_day;
             this.PaySalaries.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PaySalaries.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PaySalaries.Name = "PaySalaries";
@@ -82,7 +83,7 @@
             // 
             // AddTurnBtn
             // 
-            this.AddTurnBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.AddTurnBtn.Image = global::ClinicProject.Properties.Resources.stock_market;
             this.AddTurnBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddTurnBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddTurnBtn.Name = "AddTurnBtn";
@@ -293,6 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(664, 439);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -301,6 +303,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManageFinancial";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت مالی";
             this.Load += new System.EventHandler(this.ManageFinancial_Load);
             this.toolStrip1.ResumeLayout(false);

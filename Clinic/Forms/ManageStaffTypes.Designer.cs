@@ -55,7 +55,7 @@
             // 
             // AddBtn
             // 
-            this.AddBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.AddBtn.Image = global::ClinicProject.Properties.Resources.health_service;
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
@@ -66,7 +66,7 @@
             // 
             // RemoveBtn
             // 
-            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.RemoveBtn.Image = global::ClinicProject.Properties.Resources.fired_1_;
             this.RemoveBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RemoveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RemoveBtn.Name = "RemoveBtn";
@@ -136,7 +136,7 @@
             this.Controls.Add(this.StaffTypeGrid);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-           // this.Name = "ManageStaffTypes";
+          //  this.Name = "ManageStaffTypes";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت خدمات کارکنان";

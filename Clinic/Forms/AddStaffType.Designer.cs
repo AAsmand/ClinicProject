@@ -28,40 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
             this.SalaryTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.NameTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.AddStaffTypeBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStaffTypeBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddBtn.Location = new System.Drawing.Point(30, 147);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(69, 46);
-            this.AddBtn.TabIndex = 22;
-            this.AddBtn.Text = "افزودن";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelBtn.Location = new System.Drawing.Point(105, 147);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(69, 46);
-            this.CancelBtn.TabIndex = 21;
-            this.CancelBtn.Text = "انصراف";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // SalaryTxt
             // 
@@ -107,36 +83,63 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "افزودن خدمت";
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackgroundImage = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(109, 144);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(62, 57);
+            this.ExitBtn.TabIndex = 61;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // AddStaffTypeBtn
+            // 
+            this.AddStaffTypeBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
+            this.AddStaffTypeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddStaffTypeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddStaffTypeBtn.Location = new System.Drawing.Point(30, 144);
+            this.AddStaffTypeBtn.Name = "AddStaffTypeBtn";
+            this.AddStaffTypeBtn.Size = new System.Drawing.Size(62, 57);
+            this.AddStaffTypeBtn.TabIndex = 60;
+            this.AddStaffTypeBtn.TabStop = false;
+            this.AddStaffTypeBtn.Click += new System.EventHandler(this.AddStaffTypeBtn_Click);
+            // 
             // AddStaffType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 206);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(332, 211);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.AddStaffTypeBtn);
             this.Controls.Add(this.SalaryTxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NameTxt);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddStaffType";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "افزودن خدمات";
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStaffTypeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.TextBox SalaryTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox NameTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.PictureBox AddStaffTypeBtn;
     }
 }

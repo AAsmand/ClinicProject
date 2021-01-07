@@ -32,6 +32,8 @@ namespace ClinicProject
         {
             TurnTypeGrid.AutoGenerateColumns = false;
             TurnTypeGrid.DataSource = turnTypeRepository.getTurnTypes(ClinicId);
+            if (TurnTypeGrid.Rows.Count > 0)
+                TurnTypeGrid.CurrentCell = TurnTypeGrid[0, 0];
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)

@@ -31,8 +31,9 @@ namespace ClinicProject
         {
             StaffsGrid.AutoGenerateColumns = false;
             List<Staff> list = staffRepository.GetStaffs(ClinicId, NameTxt.Text, FamilyTxt.Text, CodeMelliTxt.Text);
-            StaffsGrid.DataSource = list.Select(p => new { Id = p.Id, Name = p.People.Name, Family = p.People.Family,StaffType=p.staffType.Name }).ToList();
-            StaffsGrid.CurrentCell = StaffsGrid[0, 0];
+            StaffsGrid.DataSource = list.Select(p => new { Id = p.Id, Name = p.People.Name, Family = p.People.Family, StaffType = p.staffType.Name }).ToList();
+            if (StaffsGrid.Rows.Count > 0)
+                StaffsGrid.CurrentCell = StaffsGrid[0, 0];
         }
 
         private void NameTxt_TextChanged(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace ClinicProject
         private void AddBtn_Click(object sender, EventArgs e)
         {
             AddStaff addStaff = new AddStaff(ClinicId);
-            if(addStaff.ShowDialog()==DialogResult.OK)
+            if (addStaff.ShowDialog() == DialogResult.OK)
             {
                 initStaffsGrid();
             }

@@ -67,6 +67,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CancelTurnBtn,
@@ -81,7 +82,7 @@
             // 
             // CancelTurnBtn
             // 
-            this.CancelTurnBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.CancelTurnBtn.Image = global::ClinicProject.Properties.Resources.medical;
             this.CancelTurnBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CancelTurnBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CancelTurnBtn.Name = "CancelTurnBtn";
@@ -97,7 +98,7 @@
             // 
             // AddTurnBtn
             // 
-            this.AddTurnBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
+            this.AddTurnBtn.Image = global::ClinicProject.Properties.Resources.medical_appointment;
             this.AddTurnBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddTurnBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddTurnBtn.Name = "AddTurnBtn";
@@ -108,7 +109,7 @@
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.toolStripButton2.Image = global::ClinicProject.Properties.Resources.appointment;
             this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
@@ -119,6 +120,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Controls.Add(this.removeFilterBtn);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.CodeMelliTxt);

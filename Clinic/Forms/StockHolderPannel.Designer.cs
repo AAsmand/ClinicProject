@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StockHolderGrid = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.EditPercentBtn = new System.Windows.Forms.ToolStripButton();
-            this.ConfirmBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodTypeIdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Percent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.EditPercentBtn = new System.Windows.Forms.ToolStripButton();
+            this.ConfirmBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.StockHolderGrid)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +57,14 @@
             this.Name,
             this.Price,
             this.Percent});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.StockHolderGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StockHolderGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.StockHolderGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.StockHolderGrid.Location = new System.Drawing.Point(0, 97);
             this.StockHolderGrid.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -73,48 +73,6 @@
             this.StockHolderGrid.RowTemplate.Height = 24;
             this.StockHolderGrid.Size = new System.Drawing.Size(900, 550);
             this.StockHolderGrid.TabIndex = 31;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.EditPercentBtn,
-            this.ConfirmBtn,
-            this.toolStripSeparator1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(900, 91);
-            this.toolStrip1.TabIndex = 30;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // EditPercentBtn
-            // 
-            this.EditPercentBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
-            this.EditPercentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EditPercentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditPercentBtn.Name = "EditPercentBtn";
-            this.EditPercentBtn.Size = new System.Drawing.Size(99, 88);
-            this.EditPercentBtn.Text = "ویرایش درصد";
-            this.EditPercentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.EditPercentBtn.ToolTipText = "toolstripe";
-            this.EditPercentBtn.Click += new System.EventHandler(this.EditPercentBtn_Click);
-            // 
-            // ConfirmBtn
-            // 
-            this.ConfirmBtn.Image = global::ClinicProject.Properties.Resources.icons8_plus_64;
-            this.ConfirmBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ConfirmBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ConfirmBtn.Name = "ConfirmBtn";
-            this.ConfirmBtn.Size = new System.Drawing.Size(88, 88);
-            this.ConfirmBtn.Text = "ثبت تغییرات";
-            this.ConfirmBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ConfirmBtn.ToolTipText = "toolstripe";
-            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 91);
             // 
             // Id
             // 
@@ -146,6 +104,48 @@
             this.Percent.HeaderText = "درصد مالکیت";
             this.Percent.Name = "Percent";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EditPercentBtn,
+            this.ConfirmBtn,
+            this.toolStripSeparator1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(900, 91);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // EditPercentBtn
+            // 
+            this.EditPercentBtn.Image = global::ClinicProject.Properties.Resources.discount;
+            this.EditPercentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EditPercentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditPercentBtn.Name = "EditPercentBtn";
+            this.EditPercentBtn.Size = new System.Drawing.Size(99, 88);
+            this.EditPercentBtn.Text = "ویرایش درصد";
+            this.EditPercentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditPercentBtn.ToolTipText = "toolstripe";
+            this.EditPercentBtn.Click += new System.EventHandler(this.EditPercentBtn_Click);
+            // 
+            // ConfirmBtn
+            // 
+            this.ConfirmBtn.Image = global::ClinicProject.Properties.Resources.confirmation;
+            this.ConfirmBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ConfirmBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ConfirmBtn.Name = "ConfirmBtn";
+            this.ConfirmBtn.Size = new System.Drawing.Size(88, 88);
+            this.ConfirmBtn.Text = "ثبت تغییرات";
+            this.ConfirmBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ConfirmBtn.ToolTipText = "toolstripe";
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 91);
+            // 
             // StockHolderPannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -155,8 +155,9 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-          //  this.Name = "StockHolderPannel";
+         //   this.Name = "StockHolderPannel";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت سهامداران";
             this.Load += new System.EventHandler(this.StockHolderPannel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockHolderGrid)).EndInit();

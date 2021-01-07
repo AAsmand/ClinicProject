@@ -42,16 +42,20 @@
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.FirstTime = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.IsPaidCheck = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.PriceLbl = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.WeekDaysCombo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AddTurnBtn = new System.Windows.Forms.PictureBox();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorsGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddTurnBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -84,7 +88,7 @@
             // NameLbl
             // 
             this.NameLbl.AutoSize = true;
-            this.NameLbl.Location = new System.Drawing.Point(399, 26);
+            this.NameLbl.Location = new System.Drawing.Point(363, 26);
             this.NameLbl.Name = "NameLbl";
             this.NameLbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.NameLbl.Size = new System.Drawing.Size(0, 23);
@@ -147,7 +151,7 @@
             this.DoctorsGrid.ReadOnly = true;
             this.DoctorsGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DoctorsGrid.RowTemplate.Height = 24;
-            this.DoctorsGrid.Size = new System.Drawing.Size(557, 201);
+            this.DoctorsGrid.Size = new System.Drawing.Size(557, 217);
             this.DoctorsGrid.TabIndex = 34;
             // 
             // Id
@@ -173,7 +177,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(653, 136);
+            this.button1.Location = new System.Drawing.Point(653, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 36);
             this.button1.TabIndex = 39;
@@ -184,20 +188,14 @@
             // FirstTime
             // 
             this.FirstTime.AutoSize = true;
-            this.FirstTime.Location = new System.Drawing.Point(724, 198);
+            this.FirstTime.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.FirstTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstTime.Font = new System.Drawing.Font("B Yekan", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.FirstTime.Location = new System.Drawing.Point(598, 248);
             this.FirstTime.Name = "FirstTime";
-            this.FirstTime.Size = new System.Drawing.Size(0, 23);
+            this.FirstTime.Size = new System.Drawing.Size(2, 28);
             this.FirstTime.TabIndex = 40;
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(653, 263);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 36);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "انتخاب زمان";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // IsPaidCheck
             // 
@@ -208,6 +206,7 @@
             this.IsPaidCheck.TabIndex = 42;
             this.IsPaidCheck.Text = "پرداخت شده";
             this.IsPaidCheck.UseVisualStyleBackColor = true;
+            this.IsPaidCheck.CheckedChanged += new System.EventHandler(this.IsPaidCheck_CheckedChanged);
             // 
             // label4
             // 
@@ -239,41 +238,69 @@
             this.PriceLbl.Size = new System.Drawing.Size(0, 23);
             this.PriceLbl.TabIndex = 44;
             // 
-            // AddBtn
+            // label5
             // 
-            this.AddBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddBtn.Location = new System.Drawing.Point(28, 395);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(99, 39);
-            this.AddBtn.TabIndex = 46;
-            this.AddBtn.Text = "ثبت نوبت";
-            this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(806, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 23);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "روز مورد نظر :";
             // 
-            // CancelBtn
+            // WeekDaysCombo
             // 
-            this.CancelBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelBtn.Location = new System.Drawing.Point(131, 395);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(99, 39);
-            this.CancelBtn.TabIndex = 45;
-            this.CancelBtn.Text = "انصراف";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            this.WeekDaysCombo.FormattingEnabled = true;
+            this.WeekDaysCombo.Location = new System.Drawing.Point(575, 136);
+            this.WeekDaysCombo.Name = "WeekDaysCombo";
+            this.WeekDaysCombo.Size = new System.Drawing.Size(230, 31);
+            this.WeekDaysCombo.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(820, 253);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 23);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "نوبت شما :";
+            // 
+            // AddTurnBtn
+            // 
+            this.AddTurnBtn.BackgroundImage = global::ClinicProject.Properties.Resources.confirmation;
+            this.AddTurnBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddTurnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddTurnBtn.Enabled = false;
+            this.AddTurnBtn.Location = new System.Drawing.Point(12, 364);
+            this.AddTurnBtn.Name = "AddTurnBtn";
+            this.AddTurnBtn.Size = new System.Drawing.Size(70, 70);
+            this.AddTurnBtn.TabIndex = 50;
+            this.AddTurnBtn.TabStop = false;
+            this.AddTurnBtn.Click += new System.EventHandler(this.AddTurnBtn_Click);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackgroundImage = global::ClinicProject.Properties.Resources.cercle_close_delete_dismiss_remove_icon_1320196712448219692_64;
+            this.ExitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(103, 364);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(70, 70);
+            this.ExitBtn.TabIndex = 51;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // ReserveTurn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(900, 450);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.AddTurnBtn);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.WeekDaysCombo);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.FirstTime);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DoctorsGrid);
@@ -282,7 +309,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("B Yekan", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-         //   this.Name = "ReserveTurn";
+            //this.Name = "ReserveTurn";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ثبت نوبت";
@@ -292,6 +319,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DoctorsGrid)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddTurnBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,12 +341,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label FirstTime;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox IsPaidCheck;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label PriceLbl;
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox WeekDaysCombo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox AddTurnBtn;
+        private System.Windows.Forms.PictureBox ExitBtn;
     }
 }

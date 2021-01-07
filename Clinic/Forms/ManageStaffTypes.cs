@@ -32,6 +32,8 @@ namespace ClinicProject
         {
             StaffTypeGrid.AutoGenerateColumns = false;
             StaffTypeGrid.DataSource = staffTypeRepository.GetStaffTypes(ClinicId);
+            if (StaffTypeGrid.Rows.Count > 0)
+                StaffTypeGrid.CurrentCell = StaffTypeGrid[0, 0];
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
